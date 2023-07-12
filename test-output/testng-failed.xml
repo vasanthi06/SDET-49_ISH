@@ -3,17 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ish.sms.admintest.Create_GradeTest">
+      <class name="ish.sms.admintest.Create_MyStudentTest">
         <methods>
-          <include name="closeDB"/>
-          <include name="logoutFromApplication"/>
-          <include name="connecToDB"/>
-          <include name="closeTheBrowser"/>
-          <include name="loginToApp"/>
-          <include name="Create_GradeTest"/>
-          <include name="launchTheBrowser"/>
+          <include name="CreateMyStudentTest"/>
         </methods>
-      </class> <!-- ish.sms.admintest.Create_GradeTest -->
+      </class> <!-- ish.sms.admintest.Create_MyStudentTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

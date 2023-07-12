@@ -118,7 +118,8 @@ public class Create_MyStudentTest   {
             Thread.sleep(5000);
 		    String name=eLib.getDataFromExcel(TEST_SCRIPT_EXCEL_FILE_PATH, "st", 2,3);
 			stu.selectClass(name);
-		    stu.Checksubject();  
+		    stu.Checksubject(); 
+		    
 		      
 		      
 		      

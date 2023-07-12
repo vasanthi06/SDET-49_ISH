@@ -40,6 +40,12 @@ public class myStudentPage {
      @FindBy(xpath="(//button[text()='No'])[3]")private WebElement NO;
      @FindBy(xpath="//input[@id='checkbox2']") private WebElement chechk;
      
+     @FindBy(xpath="//button[@onclick='upgradeGrade(this)']") private WebElement UpgradeGrade;
+     
+
+     @FindBy(xpath="//span[@class='glyphicon glyphicon-remove'])[23]")
+        private WebElement cancel2;
+     
      
      
      
@@ -290,7 +296,14 @@ public class myStudentPage {
 	{
 		chechk.click();
 	}
-	
+	public void Updategrade2()
+	{
+		UpgradeGrade.click();
+	}
+	public void canclegrade()
+	{
+		cancel2.click();
+	}
 	
 	public void tNo() {
 		 no.click();

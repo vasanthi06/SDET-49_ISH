@@ -64,7 +64,7 @@ public class BaseClass {
 		ENV_FILE_PATH = fLib.getFilePathFromPropertiesFile("projectConfigDataFilePath");
 		String BROWSER = fLib.getDataFromProperties(ENV_FILE_PATH, "browser");
 		String URL = fLib.getDataFromProperties(ENV_FILE_PATH, "url");
-		
+		System.setProperty(BROWSER, URL);
 		 
          if(BROWSER.equalsIgnoreCase("chrome"))
          {

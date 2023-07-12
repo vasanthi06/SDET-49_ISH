@@ -25,6 +25,9 @@ public class DataProviderPractice {
 		
 		data[2][0] ="vivo";
 		data[2][1] =22000;
+
+		data[2][0] ="iphone";
+		data[2][1] =52000;
 		
 		return data;
 		

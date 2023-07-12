@@ -125,7 +125,7 @@ public class Timetable {
 		driver.findElement(By.xpath("//span[text()='Ingenious Developer1']")).click();
 		driver.findElement(By.xpath("//a[text()='Sign out']")).click();
 
-
+              //changes r there
 	}
 
 

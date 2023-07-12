@@ -13,7 +13,7 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
+import org.testng.annotations.Parameters;
 
 import ISH_sms_ObjectRepositories.HomePage;
 import ISH_sms_ObjectRepositories.LoginPage;
@@ -58,11 +58,11 @@ public class BaseClass {
 	
 	//@Parameters("BROWSER")
 	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
-	public void launchTheBrowser() throws Throwable 
+	public void launchTheBrowser(String BROWSER) throws Throwable 
 	{
 		
 		ENV_FILE_PATH = fLib.getFilePathFromPropertiesFile("projectConfigDataFilePath");
-		String BROWSER = fLib.getDataFromProperties(ENV_FILE_PATH, "browser");
+		//String BROWSER = fLib.getDataFromProperties(ENV_FILE_PATH, "browser");
 		String URL = fLib.getDataFromProperties(ENV_FILE_PATH, "url");
 		System.setProperty(BROWSER, URL);
 		 

@@ -25,7 +25,7 @@ public class HomePage {
 	  
 	  @FindBy(xpath="//span[text()='My Student']") private WebElement StudentLink;
 	  
-	  @FindBy(xpath="//span[text()='Ingenious Developer1']")
+	  @FindBy(xpath="//span[@class='hidden-xs']")
 	  private WebElement AdminLink;
 	  
 	  @FindBy(linkText = "Sign out")

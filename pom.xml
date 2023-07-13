@@ -71,139 +71,34 @@
 
  
   </dependencies>
-      <profiles>
-   <profile>
-        <id>smokesuite</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testng_SmokeSuite.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-
-  <profile>
-        <id>batchsuite</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngBatch.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-  
-   <profile>
-        <id>Crossbrowser</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngCrossBrowser.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-  
-     <profile>
-        <id>Groupsuite</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngGroupExecution.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
       
-      
-      <profile>
-        <id>Reigonalsuite</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngReigonal.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-
-       <profile>
-        <id>parallelsuite</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngDistributedParallelExecution.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-  
-      <profile>
-        <id>Listners</id>
-             <build>
-                 <plugins>
-                       <plugin>
-                             <groupId>org.apache.maven.plugins</groupId>
-                             <artifactId>maven-surefire-plugin</artifactId>
-                              <version>3.0.0</version>
-                          <configuration>
-                     <suiteXmlFiles>
-                             <suiteXmlFile>testngWithListners.xml</suiteXmlFile>
-                    </suiteXmlFiles>
-                       </configuration>
-                    </plugin>
-              </plugins>
-        </build>
-  </profile>
-
-
-
-      </profiles>
-
-  
+         <profiles>
+<profile>
+<id>Parallel</id>
+<build>
+<plugins>
+<plugin>
+<groupId>org.apache.maven.plugins</groupId>
+<artifactId>maven-surefire-plugin</artifactId>
+<version>3.1.12</version>
+<configuration>
+<suiteXmlFiles>
+<suiteXmlFile>Paralleltestng.xml</suiteXmlFile>
+</suiteXmlFiles>
+</configuration>
+</plugin>
+</plugins>
+</build>
+</profile>
+         </profiles>
+        
+        
+        
+        
+        
+        
+        
+        
   
   
   

@@ -27,7 +27,7 @@ import iSH_sms_generic_Utilities.WebActionUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 
-@Listeners(iSH_sms_generic_Utilities.ListnersImplementation.class)
+//@Listeners(iSH_sms_generic_Utilities.ListnersImplementation.class)
 public class CreateTimetableTest extends BaseClass{
 
 	
@@ -139,20 +139,25 @@ public class CreateTimetableTest extends BaseClass{
 				String subject=eLib.getDatafromExcel("tt", 1, 3);
 				edit.SelectSubjectfromdropdown(wLib, subject);
 				
+				 Thread.sleep(6000);
+				
 				String teacher=eLib.getDatafromExcel("tt", 1, 4);
 				edit.Selectteacherfromdropdown(wLib, teacher);
+				
+				 Thread.sleep(6000);
 				
 				String classroom=eLib.getDatafromExcel("tt", 1, 5);
 				edit.Selectclassroomfromdropdown(wLib, classroom);
 				
-			
+				 Thread.sleep(6000);
 		       String time1=eLib.getDatafromExcel("tt", 1, 6);
 			   edit.stime(time1);
 			   
+			   Thread.sleep(6000);
 			   String time11=eLib.getDatafromExcel("tt", 1, 6);
 				   edit.endTime(time11);
 				   
-				
+				   Thread.sleep(6000);
 			   edit.Submitupdation();
 				
 				

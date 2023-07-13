@@ -12,7 +12,6 @@ import com.mysql.jdbc.Driver;
  *
  */
 public class DataBaseUtility {
-	Driver driver;
 	Connection connection;
 	ResultSet result;
 	FileUtility fLib = new FileUtility();
@@ -37,7 +36,7 @@ public class DataBaseUtility {
 	 */
 	public void connectDB() {
 		try {
-			driver=new Driver();
+			Driver driver=new Driver();
 			DriverManager.registerDriver(driver);
 			connection=DriverManager.getConnection(URL, USERNAME, PASSWORD);
 		} catch (SQLException e) {

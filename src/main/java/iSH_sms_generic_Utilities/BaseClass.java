@@ -22,7 +22,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	
 	public static WebDriver sdriver;
-	public WebDriver driver ;
+	public WebDriver driver;
 	public FileUtility fLib = new FileUtility();
 	public ExcelUtlity eLib = new ExcelUtlity();
 	public JavaUtlity jLib = new JavaUtlity();
@@ -46,7 +46,7 @@ public class BaseClass {
 			System.out.println("=======DATABASE IS CONNECTED=======");
 			
 		} catch (Exception e) {
-			// TODO: handle exception
+			
 		}
 		
 	}
@@ -58,27 +58,27 @@ public class BaseClass {
 	
 	//@Parameters("BROWSER")
 	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
-	public void launchTheBrowser(String BROWSER) throws Throwable 
+	public void launchTheBrowser() throws Throwable 
 	{
+		//WebDriverManager.firefoxdriver().setup();
 		
 		ENV_FILE_PATH = fLib.getFilePathFromPropertiesFile("projectConfigDataFilePath");
-		//String BROWSER = fLib.getDataFromProperties(ENV_FILE_PATH, "browser");
+		String BROWSER = fLib.getDataFromProperties(ENV_FILE_PATH, "browser");
 		String URL = fLib.getDataFromProperties(ENV_FILE_PATH, "url");
-		System.setProperty(BROWSER, URL);
+	//	System.setProperty(BROWSER, URL);
 		 
          if(BROWSER.equalsIgnoreCase("chrome"))
          {
-        	// WebDriverManager.chromedriver().setup();
+        	 WebDriverManager.chromedriver().setup();
         	 driver= new ChromeDriver();
          }
          else if(BROWSER.equalsIgnoreCase("firefox"))
          {
-        	 WebDriverManager.firefoxdriver().setup();
         	 driver= new FirefoxDriver();
          }
          else if(BROWSER.equalsIgnoreCase("edge"))
          {
-        	// WebDriverManager.edgedriver().setup();
+        	
         	 driver= new EdgeDriver();
          }
          else

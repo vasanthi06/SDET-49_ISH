@@ -18,9 +18,9 @@ public class EditTimetablePage {
 	@FindBy(name="teacher_id")private WebElement selectfromteacher;
 	@FindBy(name="classroom_id")private WebElement classroom;
 	@FindBy(name="classroom_id")private WebElement selectfromclass;
-	@FindBy(name="start_time")private WebElement startTime;
-	@FindBy(name="end_time")private WebElement endTime;
-	@FindBy(id="btnSubmit1")private WebElement Uclick;
+	@FindBy(xpath="//input[@placeholder='Enter start time']")private WebElement startTime;
+	@FindBy(xpath="//input[@placeholder='Enter end time']")private WebElement endTime;
+	@FindBy(xpath="//button[@class='btn btn-info']")private WebElement Uclick;
 	public WebElement getUclick() {
 		return Uclick;
 	}
@@ -96,12 +96,14 @@ public class EditTimetablePage {
 	
 	public void stime(String time1)
 	{
+		startTime.clear();
 		startTime.sendKeys(time1);
 		
 	}
 
 	public void endTime(String time11)
 	{
+		endTime.clear();
 		endTime.sendKeys(time11);
 		
 	}

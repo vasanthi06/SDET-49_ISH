@@ -17,8 +17,8 @@ import iSH_sms_generic_Utilities.JavaUtlity;
 import iSH_sms_generic_Utilities.WebActionUtility;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-@Listeners(iSH_sms_generic_Utilities.ListnersImplementation.class)
-public class createExamTest extends BaseClass{
+//@Listeners(iSH_sms_generic_Utilities.ListnersImplementation.class)
+public class CreateExamTest extends BaseClass{
 	
 	@Test(groups = "RegressionSuite")
 	public void createExamTest() throws Throwable{	
@@ -41,6 +41,7 @@ public class createExamTest extends BaseClass{
 		ep.ClickonCreateExam();
 		ep.ClickOnAdd();
 		
+		Thread.sleep(5000);
 		
 			String Exam = eLib.getDataFromExcelBasedTestId(TEST_SCRIPT_EXCEL_FILE_PATH, "ex", "tc_01", "add")+randomNum;
 
